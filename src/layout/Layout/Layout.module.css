@@ -1,0 +1,62 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+  border-right: 1px solid var(--separator-color);
+}
+
+.user {
+  margin-bottom: 45px;
+}
+
+.avatar {
+  margin-bottom: 21px;
+  filter: drop-shadow(0 8px 40px rgba(255, 197, 41, 0.25));
+}
+
+.name {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.email {
+  font-size: 14px;
+  line-height: normal;
+  color: #9EA1B1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 135px;
+  margin-top: auto;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.link img {
+  width: 23px;
+  height: 23px;
+}

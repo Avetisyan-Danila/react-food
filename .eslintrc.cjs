@@ -14,5 +14,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'semi': ['error', 'always', { 'omitLastInOneLineBlock': false}],
+    quotes: ['error', 'double'],
+    'react/prop-types': [0],
   },
 }
