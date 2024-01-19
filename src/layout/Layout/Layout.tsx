@@ -1,36 +1,55 @@
-import {Link, Outlet} from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
 import Button from "../../components/Button/Button.tsx";
+import cn from "classnames";
 
 export function Layout() {
   return (
     <div className={styles["layout"]}>
       <div className={styles["sidebar"]}>
         <div className={styles["user"]}>
-          <img className={styles["avatar"]} src="/avatar.png" alt="Аватар пользователя"/>
+          <img
+            className={styles["avatar"]}
+            src="/avatar.png"
+            alt="Аватар пользователя"
+          />
 
           <div className={styles["name"]}>Аветисян Данила</div>
           <div className={styles["email"]}>avetisyandanila21@yandex.ru</div>
         </div>
 
         <div className={styles["menu"]}>
-          <Link to='/' className={styles["link"]}>
-            <img src="/menu-icon.svg" alt="Иконка меню"/>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              cn(styles["link"], {
+                [styles["active"]]: isActive,
+              })
+            }
+          >
+            <img src="/menu-icon.svg" alt="Иконка меню" />
             Меню
-          </Link>
+          </NavLink>
 
-          <Link to='/cart' className={styles["link"]}>
-            <img src="/cart-icon.svg" alt="Иконка корзины"/>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              cn(styles["link"], {
+                [styles["active"]]: isActive,
+              })
+            }
+          >
+            <img src="/cart-icon.svg" alt="Иконка корзины" />
             Корзина
-          </Link>
+          </NavLink>
         </div>
 
         <Button className={styles["exit"]}>
-          <img src="/exit-icon.svg" alt="Иконка выхода"/>
+          <img src="/exit-icon.svg" alt="Иконка выхода" />
           <span>Выход</span>
         </Button>
       </div>
-      <div>
+      <div className={styles["content"]}>
         <Outlet />
       </div>
     </div>

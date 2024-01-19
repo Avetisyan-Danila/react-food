@@ -30,7 +30,7 @@
 .email {
   font-size: 14px;
   line-height: normal;
-  color: #9EA1B1;
+  color: #9ea1b1;
 }
 
 .menu {
@@ -42,8 +42,8 @@
 .exit {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
-  width: 135px;
   margin-top: auto;
 }
 
@@ -54,9 +54,23 @@
 
   text-decoration: none;
   color: var(--text-color);
+  transition: 0.2s ease;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+.link.active {
+  color: var(--primary-color);
 }
 
 .link img {
   width: 23px;
   height: 23px;
+}
+
+.content {
+  padding: 40px 60px;
+  width: 100%;
 }
