@@ -22,14 +22,12 @@
 
 .name {
   font-size: 20px;
-  line-height: normal;
   font-weight: 700;
   color: var(--text-color);
 }
 
 .email {
   font-size: 14px;
-  line-height: normal;
   color: #9ea1b1;
 }
 

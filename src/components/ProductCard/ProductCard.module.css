@@ -1,0 +1,86 @@
+.link {
+  text-decoration: none;
+}
+
+.card {
+  width: 320px;
+
+  border-radius: 19px;
+  background: var(--white-color);
+  box-shadow: 19px 19px 37px 0 rgba(211, 209, 216, 0.25);
+}
+
+.head {
+  position: relative;
+  min-height: 165px;
+  border-radius: 19px;
+}
+
+.footer {
+  padding: 12px;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.description {
+  color: var(--text-secondary-color);
+  font-size: 15px;
+}
+
+.price {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  background: var(--white-color);
+  padding: 3px 10px;
+  border-radius: 20px;
+
+  font-size: 18px;
+  color: #111719;
+}
+
+.currency {
+  color: var(--primary-color);
+}
+
+.add-to-cart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-to-cart:hover {
+  background: var(--primary-hover-color);
+}
+
+.rating {
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+
+  background: var(--white-color);
+  padding: 3px 10px;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px 0 rgba(254, 114, 76, 0.2);
+
+  font-size: 12px;
+  color: var(--text-color);
+}
