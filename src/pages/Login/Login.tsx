@@ -35,11 +35,7 @@ export function Login() {
 
     const target = e.target as typeof e.target & LoginForm;
     const { email, password } = target;
-    await sendLogin(email.value, password.value);
-  };
-
-  const sendLogin = async (email: string, password: string) => {
-    dispatch(login({ email, password }));
+    dispatch(login({ email: email.value, password: password.value }));
   };
 
   return (
