@@ -3,8 +3,6 @@
 }
 
 .card {
-  width: 320px;
-
   border-radius: 19px;
   background: var(--white-color);
   box-shadow: 19px 19px 37px 0 rgba(211, 209, 216, 0.25);
@@ -14,6 +12,8 @@
   position: relative;
   min-height: 165px;
   border-radius: 19px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer {

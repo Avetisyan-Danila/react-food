@@ -52,7 +52,7 @@ function Menu() {
         />
       </div>
 
-      <div>
+      <div className={styles["menu"]}>
         {error && <>{error}</>}
         {!isLoading && products.length > 0 && <MenuList products={products} />}
         {isLoading && <>Загружаем продукты...</>}

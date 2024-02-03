@@ -40,20 +40,18 @@ export function Cart() {
   };
 
   const checkout = async () => {
-    if (items.length > 0) {
-      await axios.post(
-        `${PREFIX}/order`,
-        {
-          products: items,
-        },
-        {
-          headers: { Authorization: `Bearer ${jwt}` },
-        },
-      );
+    await axios.post(
+      `${PREFIX}/order`,
+      {
+        products: items,
+      },
+      {
+        headers: { Authorization: `Bearer ${jwt}` },
+      },
+    );
 
-      dispatch(cartActions.cleanCart());
-      navigate("/success");
-    }
+    dispatch(cartActions.cleanCart());
+    navigate("/success");
   };
 
   useEffect(() => {
@@ -97,9 +95,14 @@ export function Cart() {
         </div>
       </div>
 
-      <div className={styles["checkout"]} onClick={checkout}>
-        <Button appearance="big">Оформить</Button>
-      </div>
+      {items.length > 0 && (
+        <div className={styles["checkout"]} onClick={checkout}>
+          <Button appearance="big">Оформить</Button>
+        </div>
+      )}
+      {items.length === 0 && (
+        <div className={styles["cart-empty"]}>Добавьте товары в корзину!</div>
+      )}
     </>
   );
 }
