@@ -40,18 +40,20 @@ export function Cart() {
   };
 
   const checkout = async () => {
-    await axios.post(
-      `${PREFIX}/order`,
-      {
-        products: items,
-      },
-      {
-        headers: { Authorization: `Bearer ${jwt}` },
-      },
-    );
+    if (items.length > 0) {
+      await axios.post(
+        `${PREFIX}/order`,
+        {
+          products: items,
+        },
+        {
+          headers: { Authorization: `Bearer ${jwt}` },
+        },
+      );
 
-    dispatch(cartActions.cleanCart());
-    navigate("/success");
+      dispatch(cartActions.cleanCart());
+      navigate("/success");
+    }
   };
 
   useEffect(() => {
