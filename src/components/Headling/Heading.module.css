@@ -6,4 +6,12 @@
   color: var(--text-color);
 
   margin: 0;
+
+  @media (max-width: 785px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 28px;
+  }
 }
