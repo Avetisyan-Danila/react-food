@@ -15,6 +15,8 @@ import RequireAuth from "./helpers/RequireAuth.tsx";
 import { Provider } from "react-redux";
 import { store } from "./store/store.ts";
 import { Success } from "./pages/Success/Success.tsx";
+import { ReactNotifications } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 const Menu = lazy(() => import("./pages/Menu/Menu"));
 
@@ -83,6 +85,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
+      <ReactNotifications />
       <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>,

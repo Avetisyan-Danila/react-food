@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store.ts";
 import { cartActions } from "../../store/cart.slice.ts";
 import { MouseEvent } from "react";
+import { Store } from "react-notifications-component";
 
 function ProductCard(props: ProductCardProps) {
   const dispatch = useDispatch<AppDispatch>();
@@ -12,6 +13,18 @@ function ProductCard(props: ProductCardProps) {
   const add = (e: MouseEvent) => {
     e.preventDefault();
     dispatch(cartActions.add(props.id));
+
+    Store.addNotification({
+      title: `${props.name} - Добавлено в корзину`,
+      type: "success",
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__flipInY"],
+      animationOut: ["animate__animated", "animate__flipOutX"],
+      dismiss: {
+        duration: 5000,
+      },
+    });
   };
 
   return (
