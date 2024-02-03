@@ -7,7 +7,11 @@ export function Success() {
 
   return (
     <div className={styles["success"]}>
-      <img src="/pizza.png" alt="Изображение пиццы" />
+      <img
+        src="/pizza.png"
+        alt="Изображение пиццы"
+        className={styles["image"]}
+      />
       <div className={styles["text"]}>Ваш заказ успешно оформлен!</div>
       <Button appearance="big" onClick={() => navigate("/")}>
         Сделать новый

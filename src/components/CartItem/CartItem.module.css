@@ -3,6 +3,10 @@
   gap: 20px;
   max-width: 512px;
   margin-bottom: 27px;
+
+  @media (max-width: 575px) {
+    flex-wrap: wrap;
+  }
 }
 
 .image {
@@ -38,6 +42,11 @@
   gap: 10px;
 
   margin-left: auto;
+
+  @media (max-width: 575px) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .minus,

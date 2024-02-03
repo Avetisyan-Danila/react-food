@@ -5,6 +5,16 @@
   gap: 30px;
 }
 
+.image {
+  width: 319px;
+  height: 319px;
+
+  @media (max-width: 575px) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .text {
   font-size: 31px;
   font-weight: 300;
