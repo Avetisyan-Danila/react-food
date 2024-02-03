@@ -59,7 +59,7 @@ export function Cart() {
   }, [items]);
 
   return (
-    <>
+    <div className={styles["cart"]}>
       <Heading className={styles["title"]}>Корзина</Heading>
       {items.map((i) => {
         const product = cartProducts.find((p) => p.id === i.id);
@@ -103,6 +103,6 @@ export function Cart() {
       {items.length === 0 && (
         <div className={styles["cart-empty"]}>Добавьте товары в корзину!</div>
       )}
-    </>
+    </div>
   );
 }

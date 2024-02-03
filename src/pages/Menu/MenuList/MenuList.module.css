@@ -1,8 +1,16 @@
 .menu-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 40px;
   margin: 0 auto;
+
+  @media (max-width: 2430px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media (max-width: 2100px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   @media (max-width: 1800px) {
     grid-template-columns: repeat(3, 1fr);

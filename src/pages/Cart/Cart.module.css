@@ -1,3 +1,7 @@
+.cart {
+  max-width: 512px;
+}
+
 .title {
   margin-bottom: 40px;
 }
@@ -8,11 +12,9 @@
   align-items: center;
 
   padding: 17px 0;
-  max-width: 512px;
 }
 
 .hr {
-  max-width: 512px;
   margin: 0;
   border: 1px solid #f1f2f3;
 }
@@ -28,7 +30,7 @@
 }
 
 .price span {
-  color: #9796a1;
+  color: var(--gray-color);
 }
 
 .total-count {
@@ -42,7 +44,6 @@
   align-items: center;
   justify-content: center;
 
-  max-width: 512px;
   margin-top: 70px;
 }
 
